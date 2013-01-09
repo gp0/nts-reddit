@@ -9,7 +9,7 @@ You might be wondering, if this is such a popular feature request, why doesn't r
 
 This, however, runs against the grain. The vast majority of internet users don't contribute content. Only a small minority contributes content, which you can easily prove to yourself by looking at the number of upvotes on posts on the front page (a few thousand per post at most) and compare that to the number of people who probably clicked that link - tens to hundreds of thousands or more.
 
-Well, this extension is for the rest of us. I personally up and downvote sparingly. It's incomplete (see the issue tracker), but maybe we can make it into something nice and fancy. If you would like to contribute, please contact me.
+Well, this extension is for the rest of us. I personally up and downvote sparingly. It's incomplete (see the issue tracker), but maybe we can make it into something nice and fancy. If you would like to contribute, please contact me - there are already bugs, such as some or all imgur links not getting nuked.
 
 Brian Mingus
 brian.mingus@colorado.edu
