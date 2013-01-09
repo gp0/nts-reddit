@@ -15,6 +15,7 @@ Brian Mingus
 brian.mingus@colorado.edu
 
 == Instructions ==
+
 This extension is still in development, so you must check it out and point Chrome to it.
 
 Step 1) git clone https://github.com/brianmingus/nts-reddit.git
