@@ -18,8 +18,13 @@ brian.mingus@colorado.edu
 This extension is still in development, so you must check it out and point Chrome to it.
 
 Step 1) git clone https://github.com/brianmingus/nts-reddit.git
+
 Step 2) In Chrome, navigate to Tools -> Extensions
+
 Step 3) Click Load Unpacked Extension
+
 Step 4) Navigate to the place that you checked out nts-reddit
+
 Step 5) Click Enable
+
 Step 6) Visit reddit!
