@@ -1,7 +1,7 @@
-nts-reddit
+nts-reddit (beta)
 ==========
 
-Never-The-Same Reddit
+Never-The-Same Reddit (beta) - a Google Chrome extension that deletes visited reddit links.
 
 Have you ever wondered what reddit would be like if all links were always blue, all the time? Or, in other words, that links you had already clicked don't show up the next time you visit (or perhaps they even disappear right away)? This is actually one of the most popularly requested features on reddit, and yet until now there hasn't been a single technology that allowed for it. This is because recent improvements to javascript security make it impossible to detect what links a user has visited without writing a browser extension, and even browser extensions require jumping through many hoops to get it to work. 
 
@@ -13,3 +13,13 @@ Well, this extension is for the rest of us. I personally up and downvote sparing
 
 Brian Mingus
 brian.mingus@colorado.edu
+
+== Instructions ==
+This extension is still in development, so you must check it out and point Chrome to it.
+
+Step 1) git clone https://github.com/brianmingus/nts-reddit.git
+Step 2) In Chrome, navigate to Tools -> Extensions
+Step 3) Click Load Unpacked Extension
+Step 4) Navigate to the place that you checked out nts-reddit
+Step 5) Click Enable
+Step 6) Visit reddit!
