@@ -1,0 +1,16 @@
+{
+  "name": "Never The Same (NTS) Reddit",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Previously visited links are deleted.",
+  "browser_action": {"default_icon": "icon.png"},
+  "permissions": ["history","tabs"],
+  "content_scripts": [
+      {
+	  "run_at": "document_end",      
+	  "matches": ["http://www.reddit.com/*"],
+	  "js": ["jquery-1.8.3.min.js", "ntsreddit_content.js"]
+      }
+  ],
+  "background": {"scripts": ["ntsreddit_background.js"]}
+}
