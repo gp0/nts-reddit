@@ -11,7 +11,7 @@ chrome.extension.onMessage.addListener(
 	});
     });
 
-//simple listener to add handle sent RES Urls from content script
+//simple listener to handle sent RES Urls from content script
 chrome.extension.onMessage.addListener(
 	function(request, sender) {
 		console.log(request.newUrl);
