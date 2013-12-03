@@ -1,9 +1,24 @@
+function scroll(){
+	var divTop = $('.NERPageMarker').last();
+	
+
+	if (divTop.length > 0){
+
+
+		$('html, body').animate({
+		    scrollTop: (divTop.offset().top)
+		},500);
+
+	}
+};
+
 function checkForVisistedLinks() {
 	//links
 	$('div.thing a.title').each(
 	    function(index, value) {
 	    	
 		chrome.extension.sendMessage({'url': value.href});
+
 	});
 
 	//comments
@@ -13,7 +28,16 @@ function checkForVisistedLinks() {
 		chrome.extension.sendMessage({'url': value.href});
 	});
 
+	//remove dupes 
+	$('div.NERdupe').each(
+		$(this).remove()
+	);
+
+	scroll();
+
 }
+
+
 
 function getAnchor(url) {
 
@@ -24,6 +48,8 @@ function getAnchorComments(url) {
 
     return $('a[href^="' + url + '"][class~="comments"]')
 }
+
+var hiddenLinks = 0;
 
 checkForVisistedLinks();
 
@@ -39,6 +65,7 @@ var obs = new MutationObserver(function(mutations, observer) {
 			// if a Never-Ending-Reddit-Pagemarker has been inserted, check links again:
 			if ( $(mutations[i].addedNodes[j]).is(".neverEndingReddit") ) {
 				checkForVisistedLinks();
+
 			}            
 
             
@@ -69,6 +96,7 @@ chrome.extension.onMessage.addListener(function (message) {
 
     if (anchor.length > 0) {
 		anchor.closest(".thing").remove();
+		hiddenLinks++;
     }
     else if (url.substring(0,21) == reddit) {
     	if (url.indexOf("comments") !== -1) {
@@ -78,6 +106,7 @@ chrome.extension.onMessage.addListener(function (message) {
 		}
 		if (anchor.length > 0) {
 		    anchor.closest('.thing').remove();
+		    hiddenLinks++;
 		}
 	}
     else {
